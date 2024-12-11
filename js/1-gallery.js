@@ -1,6 +1,10 @@
+
 import SimpleLightbox from "simplelightbox";
 
 import "simplelightbox/dist/simple-lightbox.min.css";
+
+
+
 
 const images = [
   {
@@ -68,7 +72,6 @@ const images = [
   },
 ];
 
-
 const gallery = document.querySelector('.gallery');
 
 function createGalleryItem(images) {
@@ -82,12 +85,13 @@ function createGalleryItem(images) {
     <img
       class="gallery-image"
       src="${preview}"
-      data-source="${original}"
       alt="${description}"
     />
   </a>
 </li>
-        `
+    `
+
+
         items.push(item);
     }
 
@@ -95,7 +99,6 @@ function createGalleryItem(images) {
 }
 
 createGalleryItem(images);
-
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captions: true,
